@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="headline">Meme Generator</h3>
+      <p class="instructions">
+        Select a url image, create a top message, and add a bottom message to
+        create your own meme!
+      </p>
+      <form action="" class="meme__form">
+        <div class="form__group">
+          <label class="meme__label" for="meme__img">URL:</label>
+          <input
+            type="url"
+            id="meme__img"
+            name="meme__img"
+            class="meme__input"
+          />
+        </div>
+        <div class="form__group">
+          <label class="meme__label" for="meme__top">Top Text:</label>
+          <input
+            type="text"
+            id="meme__top"
+            name="meme__top"
+            class="meme__input"
+          />
+        </div>
+        <div class="form__group">
+          <label class="meme__label" for="meme__bottom">Bottom Text:</label>
+          <input
+            type="text"
+            id="meme__bottom"
+            name="meme__bottom"
+            class="meme__input"
+          />
+        </div>
+        <button class="meme__btn" type="submit">Generate Meme</button>
+      </form>
+    </div>
+  </body>
+</html>
