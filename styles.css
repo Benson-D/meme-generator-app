@@ -3,6 +3,7 @@
   --clr-blue-2: #17374d;
   --blue-pseudo: #0a6f9e;
   --clr-white: #f5f5f5;
+  --clr-placeHold: #e4e4e4;
   --clr-btn: #179223;
   --clr-btn-2: #1ab629;
 
@@ -32,10 +33,12 @@ body {
   font-weight: 400;
   letter-spacing: 2px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* FORM CONTAINER  */
 .container {
   background-color: var(--clr-blue-1);
   color: var(--clr-white);
@@ -72,7 +75,13 @@ body {
   color: var(--clr-white);
 }
 
-.meme__input:focus {
+.meme__input::placeholder {
+  color: var(--clr-placeHold);
+  opacity: 1;
+}
+
+.meme__input:focus,
+.meme__input:active {
   background-color: var(--blue-pseudo);
 }
 
@@ -96,6 +105,7 @@ body {
   transform: translateY(2px);
 }
 
+/* MEDIA QUERIES FOR FORM  */
 @media only screen and (max-width: 26.25em) {
   .container {
     width: 30rem;
@@ -106,5 +116,53 @@ body {
   .headline,
   .instructions {
     text-align: center;
+  }
+}
+
+/* NEW MEME GENERATED */
+
+.generate__meme {
+  margin-bottom: 2rem;
+  width: 40rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* NEW MEME TEXT */
+.gen__top,
+.gen__bottom {
+  color: var(--clr-white);
+  font-size: 3.8rem;
+  letter-spacing: 2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+}
+
+.gen__top {
+  flex-grow: 1;
+}
+
+.gen__bottom {
+  margin-bottom: 2rem;
+}
+
+/* NEW MEME REMOVE BTN */
+.gen__btn {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  padding: 4px 8px;
+  color: var(--clr-white);
+  background-color: #0a6f9e;
+  align-self: flex-end;
+}
+
+/* MEDIA QUERIES FOR NEW MEME  */
+@media only screen and (max-width: 26.25em) {
+  .generate__meme {
+    width: 30rem;
   }
 }
